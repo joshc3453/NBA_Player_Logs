@@ -7,6 +7,16 @@ This script allows you to download NBA player season stats for a specified seaso
 - `nba_api` library
 - `pandas` library
 
+# Setting Up Virtual Environment
+# It's recommended to use a virtual environment to manage dependencies for this project.
+# Follow these steps to create and activate a virtual environment:
+
+# 3. Create a virtual environment. If you're using `venv`:
+python -m venv venv
+
+# 4. Activate the virtual environment. On Windows:
+source venv/bin/activate
+
 ## Installation
 Ensure you have Python installed on your system. Then, install the required libraries using pip:
 
