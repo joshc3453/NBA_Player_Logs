@@ -14,7 +14,7 @@ def get_nba_player_stats(season='2023-24', max_retries=5):
     active_nba_players = [player for player in nba_players if player['is_active'] == True]
 
     # Get a list of the player IDs for active players
-    active_nba_player_ids = [player['id'] for player in active_nba_players][:5]
+    active_nba_player_ids = [player['id'] for player in active_nba_players]
 
     while max_retries > 0:
         try:
