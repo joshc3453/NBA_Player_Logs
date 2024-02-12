@@ -11,10 +11,10 @@ def get_nba_player_stats(season='2023-24', max_retries=5):
     nba_players = players.get_players()
 
     # Get players that are active
-    active_nba_players = [player for player in nba_players if player['is_active'] == True]
+    active_nba_players = [player for player in nba_players if player['is_active'] == True][:5]
 
     # Get a list of the player IDs for active players
-    active_nba_player_ids = [player['id'] for player in active_nba_players]
+    active_nba_player_ids = [player['id'] for player in active_nba_players][:5]
 
     while max_retries > 0:
         try:
@@ -63,8 +63,11 @@ def get_nba_player_stats(season='2023-24', max_retries=5):
 
         current_directory = os.getcwd()
         file_path = f'{current_directory}/log_outputs/'
-        file_name = datetime.today().strftime("%Y%m%d") + '_' + datetime.today().strftime('%H%M') + '.csv'
 
+        if not os.path.exists(file_path):
+            os.mkdir(file_path)
+
+        file_name = datetime.today().strftime("%Y%m%d") + '_' + datetime.today().strftime('%H%M') + '.csv'
         full_output_path = file_path + file_name
 
         df_clean.to_csv(full_output_path, index=False)
