@@ -2,6 +2,10 @@
 
 This script allows you to download NBA player season stats for a specified season using the NBA API.
 
+Example Output:
+![image](https://github.com/joshc3453/NBA_Player_Logs/assets/94399659/1abc1fff-a016-4800-a376-a162afa04e3e)
+
+
 ## Prerequisites
 - Python 3.x
 - `nba_api` library
