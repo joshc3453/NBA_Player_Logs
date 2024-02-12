@@ -61,7 +61,8 @@ def get_nba_player_stats(season='2023-24', max_retries=5):
                                 'GP',
                                 'MIN']]
 
-        file_path = '/Users/joshcohen/Library/CloudStorage/OneDrive-Personal/Projects/NBA/nba_api/player_logs_23_24/log_outputs/'
+        current_directory = os.getcwd()
+        file_path = f'{current_directory}/log_outputs/'
         file_name = datetime.today().strftime("%Y%m%d") + '_' + datetime.today().strftime('%H%M') + '.csv'
 
         full_output_path = file_path + file_name
