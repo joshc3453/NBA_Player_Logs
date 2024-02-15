@@ -1,2 +1,3 @@
 venv/
 log_outputs/
+player_logs.sqlite
